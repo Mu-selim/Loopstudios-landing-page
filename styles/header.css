@@ -1,0 +1,174 @@
+.header {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    background-image: url(/images/desktop/image-hero.jpg);
+    background-position: center;
+    background-size: cover;
+    padding: 40px;
+}
+
+.navBox {
+    width: calc(100vw - 80px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo {
+    object-fit: contain;
+    padding-right: 16px;
+}
+
+.listBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.listItem {
+    position: relative;
+    padding: 8px 12px;
+    color: var(--White);
+    cursor: pointer;
+    font-family: var(--Josefin-Sans);
+}
+
+.listItem:hover::after {
+    content: "";
+    position: absolute;
+    width: 28px;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    margin: 0 -12px;
+    background-color: var(--White);
+    border-radius: 4px;
+}
+
+.hamburgerBox {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    display: none;
+    cursor: pointer;
+}
+
+.dash {
+    width: 20px;
+    height: 2px;
+    background-color: var(--White);
+    border-radius: 4px;
+    transition: .3s all linear;
+}
+
+@media screen and (max-width: 710px) {
+
+    #logo.active {
+        z-index: 10;
+    }
+    
+    .listBox {
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        flex-direction: column;
+        align-items: flex-start;
+        transition: 0.3s all linear;
+        gap: 12px;
+    }
+
+    .listBox.active {
+        left: 0;
+        background-color: var(--Black);
+    }
+
+    .listItem {
+        margin-left: 20px;
+        font-size: 2em;
+    }
+
+    .listItem:hover::after {
+        width: 52px;
+        height: 4px;
+        left: 0;
+        margin-left: 12px;
+    }
+
+    .hamburgerBox {
+        display: flex;
+    }
+
+    .hamburgerBox.active {
+        z-index: 10;
+    }
+
+    .hamburgerBox.active .top {
+        transform: rotate(45deg) translateY(4px);
+    }
+
+    .hamburgerBox.active .mid {
+        display: none;
+    }
+
+    .hamburgerBox.active .end {
+        transform: rotate(-45deg) translateY(-4px);
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+    .header {
+        height: 100vh;
+        padding: 40px 12px;
+    }
+
+    .navBox {
+        position: fixed;
+        width: calc(100vw - 48px);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .listItem {
+        margin-left: 0px;
+    }
+}
+
+.headerTitle {
+    width: fit-content;
+    border: 1px solid var(--White);
+    padding: 20px;
+    margin: 10% 0;
+}
+
+.headerTitle h1 {
+    color: var(--White);
+    font-size: 3em;
+    font-family: var(--Josefin-Sans);
+    font-weight: 300;
+}
+
+@media screen and (max-width: 550px) {
+    .headerTitle {
+        margin: 30% auto 0 auto;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .headerTitle {
+        margin: auto;
+    }
+
+    .headerTitle h1 {
+        color: var(--White);
+        font-size: 2em;
+        font-family: var(--Josefin-Sans);
+        font-weight: 300;
+    }
+}
