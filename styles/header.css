@@ -172,3 +172,16 @@
         font-weight: 300;
     }
 }
+
+@media screen and (max-width: 320px) {
+    .headerTitle {
+        margin: auto;
+    }
+
+    .headerTitle h1 {
+        color: var(--White);
+        font-size: 2em;
+        font-family: var(--Josefin-Sans);
+        font-weight: 300;
+    }
+}
