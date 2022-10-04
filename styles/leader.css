@@ -56,3 +56,26 @@
         font-size: 0.8em;
     }
 }
+
+@media screen and (max-width: 500px) {
+    .leaderBox {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .interactiveImg, .contentBox {
+        width: 100%;
+        min-height: 50vh;
+    }
+
+    .contentBox {
+        padding: 0 16px;
+        margin: 0;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contentBox h2, .contentBox p {
+        text-align: center;
+    }
+}
