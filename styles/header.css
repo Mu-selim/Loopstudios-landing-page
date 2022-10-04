@@ -3,7 +3,7 @@
     height: fit-content;
     display: flex;
     flex-direction: column;
-    background-image: url("https://github.com/Mu-selim/Loopstudios-landing-page/blob/master/images/desktop/image-hero.jpg?raw=true");
+    background-image: url("../images/desktop/image-hero.jpg");
     background-position: center;
     background-size: cover;
     padding: 40px;
@@ -128,7 +128,6 @@
     }
 
     .navBox {
-        position: fixed;
         width: calc(100vw - 48px);
         display: flex;
         justify-content: space-between;
