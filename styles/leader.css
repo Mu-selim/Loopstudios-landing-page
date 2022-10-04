@@ -1,0 +1,58 @@
+.leaderBox {
+    width: 100%;
+    min-height: 80vh;
+    display: flex;
+    padding: 60px 40px;
+}
+
+.interactiveImg {
+    width: 60%;
+    background-image: url("../images/desktop/image-interactive.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.contentBox {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 40px 0 0 40px;
+    margin: 100px 0 0 -100px;
+    background-color: var(--White);
+    gap: 20px;
+}
+
+.contentBox h2 {
+    font-family: var(--Josefin-Sans);
+    font-weight: 300;
+    font-size: 3em;
+}
+
+.contentBox p {
+    font-family: var(--Josefin-Sans);
+    font-weight: 400;
+    color: var(--Very-Dark-Gray);
+}
+
+@media screen and (max-width: 700px) {
+    .contentBox {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 40px 0 0 40px;
+        margin: 100px 0 0 -100px;
+        background-color: var(--White);
+        gap: 20px;
+    }
+
+    .contentBox h2 {
+        font-size: 2em;
+    }
+    
+    .contentBox p {
+        font-size: 0.8em;
+    }
+}
