@@ -1,0 +1,131 @@
+.cardContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 0 40px;
+    gap: 32px;
+}
+
+.creationAndButton {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.creationAndButton .ourCreations {
+    font-family: var(--Alata);
+    font-weight: 200;
+    font-size: 2em;
+    letter-spacing: 2px;
+}
+
+.seeAll {
+    font-family: var(--Alata);
+    font-weight: 300;
+    padding: 8px 16px;
+    background-color: transparent;
+    border: 1px solid var(--Black);
+    cursor: pointer;
+    transition: 0.3s all linear;
+}
+
+.seeAll:hover {
+    background-color: var(--Black);
+    color: var(--White);
+}
+
+.cardsBox {
+    width: 100%;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.cards {
+    min-width: 150px;
+    height: 50vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding: 0 10px 20px 20px;
+    background-color: var(--Dark-Gray);
+    background-position: 50% 25%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: var(--White);
+    font-family: var(--Alata);
+    font-weight: 300;
+    cursor: pointer;
+}
+
+.cards:hover {
+    background-blend-mode: screen;
+    color: var(--Black);
+}
+
+#card1 {
+    background-image: url('../images/desktop/image-deep-earth.jpg');
+}
+#card2 {
+    background-image: url('../images/desktop/image-night-arcade.jpg');
+}
+#card3 {
+    background-image: url('../images/desktop/image-soccer-team.jpg');
+}
+#card4 {
+    background-image: url('../images/desktop/image-grid.jpg');
+}
+#card5 {
+    background-image: url('../images/desktop/image-from-above.jpg');
+}
+#card6 {
+    background-image: url('../images/desktop/image-pocket-borealis.jpg');
+}
+#card7 {
+    background-image: url('../images/desktop/image-curiosity.jpg');
+}
+#card8 {
+    background-image: url('../images/desktop/image-fisheye.jpg');
+}
+
+.buttonContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#btnSmall {
+    width: fit-content;
+    display: none;
+}
+
+@media screen and (max-width: 750px) {
+    .cardsBox {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .cardsBox {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .creationAndButton {
+        justify-content: center;
+    }
+
+    .cardsBox {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .seeAll {
+        display: none;
+    }
+
+    #btnSmall {
+        display: block;
+    }
+    
+}
